@@ -7,7 +7,8 @@ using System.Xaml.Permissions;
 using Next_Level.Classes;
 
 namespace Next_Level.Classes
-{
+{   
+    [Serializable]
     public class Product
     {
         string path;
@@ -36,6 +37,12 @@ namespace Next_Level.Classes
 
         public int ID_Product { set; get; }
 
+        public Product()
+        {
+
+            ID_Product++;
+
+        }
         
 
         public void InFile() {

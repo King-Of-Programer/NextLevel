@@ -58,17 +58,46 @@ namespace Next_Level
         {
             User user = new User();
             user = accounts.getUserByLogin(this.current_user);
-            Coments.Text += $"{user.Name}\n{ComW.Text}";
+            if(string.IsNullOrEmpty(ComW.Text))
+            {
+                MessageBox.Show("Is Empty");
+               
+            }
+            else
+            {
+                Coments.Text += $"\n{user.Name}\n{ComW.Text}";
+            }
+            
             ComW.Clear();
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            gallary.Source = new BitmapImage(new Uri("C:\\Users\\Alex\\Desktop\\1.jpg"));
+            
         }
 
-       
+        private void products_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                User user = new User();
+                user = accounts.getUserByLogin(this.current_user);
+                if (string.IsNullOrEmpty(ComW.Text))
+                {
+                    MessageBox.Show("Is Empty");
+
+                }
+                else
+                {
+                    Coments.Text += $"\n{user.Name}\n{ComW.Text}";
+                }
+
+                ComW.Clear();
+            }
+        }
+
+
 
         //private void First_Click(object sender, RoutedEventArgs e)
         //{

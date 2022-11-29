@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml.Serialization;
 
 namespace Next_Level.Classes
@@ -41,5 +42,29 @@ namespace Next_Level.Classes
                 return obj;
             }
         }
+        public void SaveProduct(Product p)
+        {
+            stream = new FileStream(path, FileMode.Create);
+            serializer = new XmlSerializer(typeof(Product));
+            serializer.Serialize(stream, p);
+            stream.Close();
+        }
+        //public Product LoadProduct()
+        //{
+
+        //    Product p;
+        //    if (!File.Exists(path))
+        //    {
+        //        MessageBox.Show("File Exists");
+        //    }
+        //    else
+        //    {
+        //        stream = new FileStream(path, FileMode.Open);
+        //        serializer = new XmlSerializer(typeof(Product));
+        //        p = (Product)serializer.Deserialize(stream);
+        //        stream.Close();
+        //        return p;
+        //    }
+        //}
     }
 }

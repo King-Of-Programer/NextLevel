@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\dsgnrr\source\repos\NextLevel\Next Level\obj\Debug\
+C:\Users\Alex\Desktop\NextLevel\Next Level\obj\Debug\
 Next_Level
 none
 false
 DEBUG;TRACE
-C:\Users\dsgnrr\source\repos\NextLevel\Next Level\App.xaml
+C:\Users\Alex\Desktop\NextLevel\Next Level\App.xaml
 16622178801
 
-24-1397421984
+23975767191
 13-38814620
 Assets\Icons\Icons.xaml;UserContorls\Item.xaml;MainWindow.xaml;Pages\Cart.xaml;Pages\Collections.xaml;Pages\Home.xaml;Pages\ProductInfo.xaml;Pages\Sign_in.xaml;Pages\Sign_up.xaml;Pages\Messages.xaml;Pages\Users.xaml;Styles\ButtonStyle.xaml;Styles\Login.xaml;Styles\RadioButtonStyle.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
 
-True
+False
 

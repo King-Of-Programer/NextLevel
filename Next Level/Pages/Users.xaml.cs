@@ -227,80 +227,80 @@ namespace Next_Level.Pages
             else return false;
         }
 
-        private void createAccount_Click(object sender, RoutedEventArgs e)
-        {
-            int count = 0;
+        //private void createAccount_Click(object sender, RoutedEventArgs e)
+        //{
+        //    int count = 0;
 
-            if (!isFieldsNoEmpty())
-            {
-                FieldsEmpty.Visibility = Visibility.Visible;
-                createAccount.Margin = new Thickness(0, 0, 0, 0);
-            }
+        //    if (!isFieldsNoEmpty())
+        //    {
+        //        FieldsEmpty.Visibility = Visibility.Visible;
+        //        createAccount.Margin = new Thickness(0, 0, 0, 0);
+        //    }
 
-            else
-            {
-                FieldsEmpty.Visibility = Visibility.Collapsed;
-                createAccount.Margin = FieldsEmpty.Margin;
-                count++;
-            }
+        //    else
+        //    {
+        //        FieldsEmpty.Visibility = Visibility.Collapsed;
+        //        createAccount.Margin = FieldsEmpty.Margin;
+        //        count++;
+        //    }
 
-            if (!EmailCheckFormat(userEmail.Text) || EmailCheck(userEmail.Text))
-            {
-                if (!EmailCheckFormat(userEmail.Text))
-                    EmailError2.Visibility = Visibility.Visible;
-                else
-                    EmailError.Visibility = Visibility.Visible;
-                EmailBorder.Margin = new Thickness(0, 0, 0, 0);
-                EmailBorder.BorderBrush = Brushes.Red;
-            }
-            else
-            {
-                EmailError.Visibility = Visibility.Collapsed;
-                EmailError2.Visibility = Visibility.Collapsed;
-                EmailBorder.Margin = EmailError.Margin;
-                EmailBorder.BorderBrush = Brushes.Gray;
-                count++;
-            }
+        //    if (!EmailCheckFormat(userEmail.Text) || EmailCheck(userEmail.Text))
+        //    {
+        //        if (!EmailCheckFormat(userEmail.Text))
+        //            EmailError2.Visibility = Visibility.Visible;
+        //        else
+        //            EmailError.Visibility = Visibility.Visible;
+        //        EmailBorder.Margin = new Thickness(0, 0, 0, 0);
+        //        EmailBorder.BorderBrush = Brushes.Red;
+        //    }
+        //    else
+        //    {
+        //        EmailError.Visibility = Visibility.Collapsed;
+        //        EmailError2.Visibility = Visibility.Collapsed;
+        //        EmailBorder.Margin = EmailError.Margin;
+        //        EmailBorder.BorderBrush = Brushes.Gray;
+        //        count++;
+        //    }
 
-            if (LoginCheck(Login.Text))
-            {
-                LoginError.Visibility = Visibility.Visible;
-                LoginBorder.Margin = new Thickness(0, 0, 0, 0);
-                LoginBorder.BorderBrush = Brushes.Red;
-            }
+        //    if (LoginCheck(Login.Text))
+        //    {
+        //        LoginError.Visibility = Visibility.Visible;
+        //        LoginBorder.Margin = new Thickness(0, 0, 0, 0);
+        //        LoginBorder.BorderBrush = Brushes.Red;
+        //    }
 
-            else
-            {
-                LoginError.Visibility = Visibility.Collapsed;
-                LoginBorder.Margin = LoginError.Margin;
-                LoginBorder.BorderBrush = Brushes.Gray;
-                count++;
-            }
+        //    else
+        //    {
+        //        LoginError.Visibility = Visibility.Collapsed;
+        //        LoginBorder.Margin = LoginError.Margin;
+        //        LoginBorder.BorderBrush = Brushes.Gray;
+        //        count++;
+        //    }
 
-            if (!CheckPassword(userPassword.Password))
-            {
-                PasswordError.Visibility = Visibility.Visible;
-                PasswordBorder.Margin = new Thickness(0, 0, 0, 0);
-                PasswordBorder.BorderBrush = Brushes.Red;
-            }
+        //    if (!CheckPassword(userPassword.Password))
+        //    {
+        //        PasswordError.Visibility = Visibility.Visible;
+        //        PasswordBorder.Margin = new Thickness(0, 0, 0, 0);
+        //        PasswordBorder.BorderBrush = Brushes.Red;
+        //    }
 
-            else
-            {
-                PasswordError.Visibility = Visibility.Collapsed;
-                PasswordBorder.Margin = PasswordError.Margin;
-                PasswordBorder.BorderBrush = Brushes.Gray;
-                count++;
-            }
+        //    else
+        //    {
+        //        PasswordError.Visibility = Visibility.Collapsed;
+        //        PasswordBorder.Margin = PasswordError.Margin;
+        //        PasswordBorder.BorderBrush = Brushes.Gray;
+        //        count++;
+        //    }
 
-            if (count >= 4)
-            {
-                user.Login = login.Text;
-                user.Name = name.Text;
-                user.Surname = Surname.Text;
-                user.Email = email.Text;
-                user.Password = Password.Password;
-                accounts.AddNew(user);
-            }
-        }
+        //    if (count >= 4)
+        //    {
+        //        user.Login = login.Text;
+        //        user.Name = name.Text;
+        //        user.Surname = Surname.Text;
+        //        user.Email = email.Text;
+        //        user.Password = Password.Password;
+        //        accounts.AddNew(user);
+        //    }
+        //}
     }
 }
