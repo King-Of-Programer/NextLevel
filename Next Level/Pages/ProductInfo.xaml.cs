@@ -66,6 +66,7 @@ namespace Next_Level
             else
             {
                 Coments.Text += $"\n{user.Name}\n{ComW.Text}";
+            
             }
             
             ComW.Clear();
